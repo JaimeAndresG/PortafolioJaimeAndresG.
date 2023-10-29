@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+
+    <nav class="nav">
+        <div class="nav__container">
+
+            <h1 class="nav__logo">JaimeAndresG</h1>
+
+            <label for="menu" class="nav__label">
+                <img src="/assets/menu.svg" class="nav__img">
+            </label>
+            <input type="checkbox" id="menu" class="nav__input">
+
+            <div class="nav__menu">
+               <a href="index.html" class="nav__item">Inicio</a>
+               <a href="proyectos.html" class="nav__item">Proyectos</a>
+               <a href="contacto.html" class="nav__item">Contacto</a>
+            </div>
+
+        </div>
+    </nav>
+
+
+    <div class="contact">
+        <div class="contact__info">
+            <h1>Si deseas obtener más información sobre mí, te invito a descargar mi currículum. En él, encontrarás detalles relevantes sobre mis habilidades y conocimientos.</h1>
+        
+        </div>
+        <div class="contact__download">
+            <a href="CV/CV Jaime-Gonzalez-Analista-Programador.pdf" download="CV Jaime-Gonzalez-Analista-Programador.pdf" id="downloadCV">Descargar Currículum</a>
+        </div>
+    </div>
+
+    <script>
+        // Función para descargar el currículum al hacer clic en el enlace
+        document.getElementById("downloadCV").addEventListener("click", function() {
+            // Reemplaza "tu_curriculum.pdf" con la ruta correcta a tu currículum PDF
+            var a = document.createElement("a");
+            a.href = "CV/CV Jaime-Gonzalez-Analista-Programador.pdf";
+            a.download = "CV Jaime-Gonzalez-Analista-Programador.pdf"; // Nombre del archivo que se descargará
+            a.style.display = "none";
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+        });
+    </script>
+    
+</body>
+</html>
