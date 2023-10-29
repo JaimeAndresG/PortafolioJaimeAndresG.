@@ -35,7 +35,7 @@
             <a href="https://github.com/JaimeAndresG/ProWebPetShop" class="btn">Más Información</a>
         </div>
     </div>
-
+    
     <div class="proyecto">
         <img src="img/RegistrApp.png" alt="Mi Proyecto">
         <div class="descripcion">
@@ -45,8 +45,16 @@
         </div>
     </div>
 
-
-  
     
+    <script>
+        // JavaScript para ocultar la barra de desplazamiento al abrir el menú
+        document.getElementById('menu').addEventListener('change', function() {
+            if (this.checked) {
+                document.querySelector('html').style.overflow = 'hidden';
+            } else {
+                document.querySelector('html').style.overflow = 'auto';
+            }
+        });
+    </script> 
 </body>
 </html>

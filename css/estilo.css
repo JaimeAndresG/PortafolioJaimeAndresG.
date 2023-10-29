@@ -217,6 +217,10 @@ img {
     background-color: #0056b3;
 }
 
+.no-scroll {
+    overflow: hidden;
+  }
+
 /* Estilos responsivos */
 @media (max-width: 768px) {
     .nav__label {
@@ -235,9 +239,17 @@ img {
         justify-content: space-evenly;
         flex-direction: column;
         align-items: center;
-        clip-path: circle(0 at center);
+        clip-path: circle(0 at center); /* Oculta el contenido al 100% */
         transition: clip-path 1s ease-in-out;
-    }
+      }
+      
+      .nav__menu.hidden {
+        clip-path: circle(0 at center); /* Cambia esta propiedad para ocultar completamente el sidebar */
+        transition: clip-path 1s ease-in-out;
+      }
+      
+
+    
 
     .nav__input:checked + .nav__menu {
         clip-path: circle(100% at center);
